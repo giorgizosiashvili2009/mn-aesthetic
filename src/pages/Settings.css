@@ -1,0 +1,164 @@
+.settingsPage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0 100px;
+}
+
+.settingsLoading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f2ee;
+}
+
+.settingsTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.settingsTop > div:first-child span,
+.settingsSectionTitle span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.5;
+}
+
+.settingsTop h1 {
+  font-size: 42px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.settingsTop p {
+  margin: 0;
+  opacity: 0.55;
+}
+
+.languageButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.languageButtons button {
+  padding: 11px 18px;
+  border: 1px solid #d8d3cc;
+  background: white;
+  cursor: pointer;
+}
+
+.languageButtons button.active {
+  background: #111;
+  color: white;
+}
+
+.settingsSection {
+  background: white;
+  border: 1px solid #e2ded8;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.settingsSectionTitle {
+  margin-bottom: 25px;
+}
+
+.settingsSectionTitle h2 {
+  margin: 7px 0 0;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.settingsSection label,
+.editableService label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+
+.settingsSection input,
+.settingsSection textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d8d3cc;
+  background: #faf9f7;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.settingsSection input:focus,
+.settingsSection textarea:focus {
+  border-color: #111;
+}
+
+.editableService {
+  border-top: 1px solid #e5e1db;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.editableService h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.uploadButton {
+  border: 1px solid #111;
+  background: white;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.uploadButton:hover {
+  background: #111;
+  color: white;
+}
+
+.settingsMessage {
+  padding: 15px;
+  background: white;
+  border: 1px solid #e2ded8;
+  margin-bottom: 15px;
+}
+
+.saveSettingsButton {
+  width: 100%;
+  padding: 16px;
+  background: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.saveSettingsButton:disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .settingsPage {
+    width: 92%;
+    padding-top: 30px;
+  }
+
+  .settingsTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .settingsTop h1 {
+    font-size: 34px;
+  }
+
+  .settingsSection {
+    padding: 22px;
+  }
+}

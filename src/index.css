@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600&display=swap');
+
+:root {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #302b27;
+  background: #f7f1e8;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f7f1e8; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+.app { min-height: 100vh; overflow: hidden; }
+.navbar {
+  height: 82px; padding: 0 6.5%; display: flex; align-items: center;
+  justify-content: space-between; background: rgba(247,241,232,.94);
+  border-bottom: 1px solid #e7ded2; position: sticky; top: 0; z-index: 20;
+  backdrop-filter: blur(16px);
+}
+.brand, .footerBrand { border: 0; background: transparent; display: flex; align-items: baseline; gap: 9px; color: #302b27; }
+.brand span, .footerBrand span { font-family: 'Playfair Display', serif; font-size: 27px; }
+.brand small, .footerBrand small { font-size: 8px; letter-spacing: .25em; }
+.navbar nav { display: flex; gap: 34px; }
+.navbar nav button { border: 0; background: none; color: #6f665e; font-size: 13px; }
+.navbar nav button:hover { color: #302b27; }
+.navActions { display: flex; align-items: center; gap: 10px; }
+.outlineButton, .accountButton {
+  border: 1px solid #cfc3b4; background: transparent; border-radius: 100px;
+  padding: 10px 18px; color: #403831; font-size: 12px;
+}
+.accountButton { background: #403831; color: white; border-color: #403831; }
+.menuButton { display: none; background: none; font-size: 20px; }
+
+.hero {
+  min-height: 720px; padding: 80px 7%; display: grid; grid-template-columns: 1.06fr .94fr;
+  align-items: center; gap: 70px; background: linear-gradient(120deg,#f8f3eb,#eee2d2);
+}
+.heroContent { padding: 30px 0; }
+.eyebrow { color: #9b856e; font-size: 10px; font-weight: 600; letter-spacing: .22em; }
+.hero .eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+.hero .eyebrow span { width: 30px; height: 1px; background: #b69f86; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(52px, 6.3vw, 87px); font-weight: 500; line-height: .98; letter-spacing: -.04em; margin: 0; }
+h1 i, h2 i, h3 i { font-weight: 500; color: #9a7e61; }
+.heroText { max-width: 490px; color: #766d65; line-height: 1.8; font-size: 15px; margin: 30px 0; }
+.heroActions { display: flex; align-items: center; gap: 24px; }
+.primaryButton {
+  background: #40372f; color: white; border: 0; border-radius: 100px;
+  padding: 15px 22px; font-size: 12px; transition: transform .2s, background .2s;
+}
+.primaryButton:hover { transform: translateY(-2px); background: #554940; }
+.primaryButton span, .darkButton span, .lightButton span { margin-left: 12px; }
+.textButton { background: transparent; border: 0; color: #5f554c; font-size: 12px; }
+.textButton:hover { color: #9a7e61; }
+.heroMeta { display: flex; gap: 35px; margin-top: 60px; }
+.heroMeta div { display: flex; align-items: center; gap: 10px; }
+.heroMeta strong { font-family: 'Playfair Display', serif; font-size: 25px; font-weight: 500; }
+.heroMeta span { color: #8a7d70; font-size: 9px; line-height: 1.35; letter-spacing: .08em; text-transform: uppercase; }
+
+.heroVisual { min-height: 540px; display: grid; place-items: center; }
+.visualFrame {
+  width: min(440px,90%); height: 540px; border-radius: 230px 230px 25px 25px;
+  background: #d8c8b4; position: relative; display: grid; place-items: center;
+  box-shadow: 0 30px 70px rgba(91,70,48,.13); overflow: visible;
+}
+.softGlow { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,249,239,.5); filter: blur(2px); }
+.visualCircle {
+  width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.65);
+  display: grid; place-items: center; align-content: center; position: relative; z-index: 1;
+}
+.monogram { color: #fff; font-family: 'Playfair Display', serif; font-size: 75px; letter-spacing: -.05em; }
+.visualCaption { color: #f9f2e8; font-size: 8px; letter-spacing: .28em; margin-top: -18px; }
+.floatingCard {
+  position: absolute; bottom: 42px; left: -34px; background: #fffdf9; padding: 17px 22px;
+  display: flex; gap: 12px; align-items: center; border-radius: 8px; box-shadow: 0 16px 35px rgba(71,53,36,.12);
+}
+.floatingCard > span { color: #a98c6c; font-size: 20px; }
+.floatingCard strong, .floatingCard small { display: block; }
+.floatingCard strong { font-family: 'Playfair Display', serif; font-size: 14px; }
+.floatingCard small { color: #8a7d70; font-size: 9px; margin-top: 4px; }
+
+.servicesSection { padding: 120px 7%; background: #fbf8f3; }
+.sectionIntro { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; gap: 40px; }
+.sectionIntro h2, .aboutContent h2, .accountHeader h2 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(42px,5vw,62px); line-height: 1; margin: 13px 0 0; }
+.sectionIntro > p { max-width: 350px; color: #7d746c; font-size: 13px; line-height: 1.7; margin: 0; }
+.serviceGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.serviceCard { background: #f4eee5; border: 1px solid #e5dace; min-height: 570px; padding: 30px; display: flex; flex-direction: column; position: relative; }
+.serviceTop { display: flex; justify-content: space-between; }
+.serviceNumber { font-family: 'Playfair Display', serif; font-size: 18px; }
+.serviceTag { font-size: 8px; letter-spacing: .18em; color: #9a836b; border: 1px solid #d2c3b1; border-radius: 100px; padding: 6px 9px; }
+.serviceArt { height: 220px; display: grid; place-items: center; }
+.laserArt, .nailArt { width: 190px; height: 190px; border-radius: 50%; background: #e8dccc; display: grid; place-items: center; position: relative; }
+.laserRing { width: 135px; height: 135px; border-radius: 50%; border: 1px solid #fff; }
+.laserLine { position: absolute; width: 155px; height: 1px; background: #aa9278; transform: rotate(-40deg); }
+.laserArt span, .nailArt span { position: absolute; font-size: 8px; letter-spacing: .28em; color: #8c765f; }
+.nailShape { width: 80px; height: 105px; background: #c9a991; border-radius: 42px 42px 35px 35px; transform: rotate(12deg); box-shadow: inset 12px 0 0 rgba(255,255,255,.18); }
+.serviceCard h3 { font-family: 'Playfair Display', serif; font-size: 35px; font-weight: 500; line-height: 1.02; margin: 10px 0 15px; }
+.serviceCard > p { color: #7c7269; font-size: 12px; line-height: 1.7; max-width: 430px; }
+.serviceBottom { margin-top: auto; padding-top: 25px; border-top: 1px solid #dfd2c3; display: flex; justify-content: space-between; align-items: center; }
+.serviceBottom > span { color: #6f6358; font-size: 11px; }
+.serviceBottom button { background: none; border: 0; font-size: 11px; color: #40372f; }
+.serviceBottom b { font-size: 17px; margin-left: 10px; }
+
+.aboutSection { display: grid; grid-template-columns: 1fr 1fr; min-height: 650px; background: #e8ddce; }
+.aboutImage { min-height: 650px; background: #d2c1ac; position: relative; display: grid; place-items: center; }
+.aboutSeal { width: 190px; height: 190px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; display: grid; place-items: center; align-content: center; text-align: center; color: #fff; font-family: 'Playfair Display', serif; font-size: 52px; }
+.aboutSeal small { font-family: 'DM Sans',sans-serif; font-size: 7px; letter-spacing: .3em; margin-top: -12px; }
+.verticalText { position: absolute; left: 35px; bottom: 35px; transform: rotate(-90deg); transform-origin: left bottom; color: #f9f2e8; font-size: 8px; letter-spacing: .22em; }
+.aboutContent { padding: 100px 10%; align-self: center; }
+.aboutContent h2 { margin-bottom: 35px; }
+.aboutContent p { color: #70665d; line-height: 1.9; font-size: 14px; max-width: 500px; }
+.darkButton { margin-top: 25px; border: 0; background: #40372f; color: #fff; border-radius: 100px; padding: 15px 22px; font-size: 11px; }
+
+.accountSection { padding: 85px 7%; background: #fbf8f3; }
+.accountHeader { display: flex; justify-content: space-between; align-items: end; margin-bottom: 35px; }
+.emptyState { background: #f3ece2; border: 1px solid #e3d8ca; padding: 45px; text-align: center; }
+.emptyState > span { font-size: 24px; color: #a88b6a; }
+.emptyState h3 { font-family: 'Playfair Display',serif; font-size: 28px; font-weight: 500; margin: 10px 0; }
+.emptyState p { color: #7d746c; font-size: 13px; margin-bottom: 25px; }
+.appointmentList { border-top: 1px solid #ded3c7; }
+.appointmentRow { display: grid; grid-template-columns: 1.5fr 1fr .6fr; align-items: center; gap: 15px; padding: 20px 5px; border-bottom: 1px solid #ded3c7; font-size: 12px; }
+.appointmentRow > div { display: flex; align-items: center; gap: 10px; }
+.statusDot { width: 7px; height: 7px; border-radius: 50%; background: #aa9278; }
+.status { justify-self: end; border-radius: 100px; padding: 6px 10px; background: #eee4d7; color: #806c58; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
+
+.ctaSection { background: #40372f; color: #fff; text-align: center; padding: 125px 7%; }
+.ctaSection .eyebrow { color: #c7b59e; }
+.ctaSection h2 { font-family: 'Playfair Display',serif; font-size: clamp(48px,6vw,78px); font-weight: 500; margin: 18px 0; line-height: 1; }
+.ctaSection p { color: #cfc4b8; font-size: 13px; margin: 0 auto 32px; }
+.lightButton { background: #f3eadf; color: #40372f; border: 0; border-radius: 100px; padding: 15px 22px; font-size: 11px; }
+
+footer { background: #2d2824; color: #ddd4ca; padding: 35px 7%; display: flex; justify-content: space-between; align-items: center; }
+.footerBrand { color: white; }
+.footerInfo { display: flex; gap: 35px; color: #988e84; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+
+.modalOverlay { position: fixed; inset: 0; background: rgba(31,25,21,.58); z-index: 100; display: grid; place-items: center; padding: 20px; backdrop-filter: blur(5px); }
+.modal { width: min(500px,100%); background: #fffdf9; padding: 42px; position: relative; box-shadow: 0 30px 100px rgba(0,0,0,.25); }
+.closeButton { position: absolute; right: 20px; top: 16px; background: none; border: 0; font-size: 28px; color: #7c7168; }
+.modal h2 { font-family: 'Playfair Display',serif; font-size: 44px; line-height: 1; font-weight: 500; margin: 13px 0 30px; }
+.modal form { display: grid; gap: 16px; }
+.modal label { display: grid; gap: 7px; color: #675e56; font-size: 11px; }
+.modal input, .modal select, .modal textarea { width: 100%; border: 1px solid #ddd2c5; background: #f8f3eb; padding: 12px; outline: 0; color: #302b27; border-radius: 5px; }
+.modal input:focus, .modal select:focus, .modal textarea:focus { border-color: #9a7e61; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.formError { color: #a94c43; background: #f8e9e6; padding: 10px 12px; font-size: 11px; }
+.full { width: 100%; }
+.authRequired { text-align: center; }
+.authIcon { width: 70px; height: 70px; border-radius: 50%; background: #e9ded0; color: #8e765d; display: grid; place-items: center; margin: 0 auto 20px; font-family: 'Playfair Display',serif; font-size: 24px; }
+.authRequired p { color: #776e66; line-height: 1.7; font-size: 13px; margin-bottom: 20px; }
+.switchAuth { margin-top: 18px; width: 100%; background: none; border: 0; color: #806c58; font-size: 11px; text-decoration: underline; }
+
+@media (max-width: 850px) {
+  .navbar { padding: 0 5%; }
+  .navbar nav { display: none; }
+  .menuButton { display: block; }
+  .hero { grid-template-columns: 1fr; padding: 65px 5%; }
+  .heroVisual { min-height: 460px; }
+  .visualFrame { height: 460px; }
+  .serviceGrid { grid-template-columns: 1fr; }
+  .sectionIntro { display: block; }
+  .sectionIntro > p { margin-top: 20px; }
+  .aboutSection { grid-template-columns: 1fr; }
+  .aboutImage { min-height: 430px; }
+  .aboutContent { padding: 70px 7%; }
+  .appointmentRow { grid-template-columns: 1fr; }
+  .status { justify-self: start; }
+}
+@media (max-width: 520px) {
+  .navbar { height: 70px; }
+  .brand span { font-size: 23px; }
+  .hero { min-height: auto; }
+  .hero h1 { font-size: 50px; }
+  .heroActions { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .heroMeta { gap: 18px; }
+  .heroMeta strong { font-size: 20px; }
+  .heroVisual { min-height: 380px; }
+  .visualFrame { height: 380px; width: 95%; }
+  .visualCircle { width: 210px; height: 210px; }
+  .monogram { font-size: 60px; }
+  .floatingCard { left: -5px; bottom: 25px; }
+  .servicesSection { padding: 80px 5%; }
+  .serviceCard { min-height: 510px; padding: 24px; }
+  .aboutImage { min-height: 350px; }
+  .ctaSection { padding: 90px 5%; }
+  footer { display: block; }
+  .footerInfo { margin-top: 20px; display: grid; gap: 8px; }
+  .modal { padding: 32px 22px; }
+  .formRow { grid-template-columns: 1fr; }
+}
